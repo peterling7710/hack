@@ -1,0 +1,28 @@
+.carousel{
+  border-radius: 12px 12px 12px 12px;
+  width: 600px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.reg{
+  width:40%;
+  margin: 50px auto;
+}
+
+.regbutton{
+  margin-top: 15px;
+}
+
+#row{
+  margin-left: : 30px;
+  margin-right: 30px;
+}
+
+#initmsg, #displaymsg{
+  margin-top: 150px;
+}
+
+#map{
+  height: 100%;
+}

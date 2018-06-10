@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class ="reg text-center">
+  <h1>Camera Registration</h1>
+  <p> Please enter camera(s) information.</p>
+  <form>
+
+      <div class="form-group" >
+        <label for="exampleInputEmail1">Camera Type</label>
+        <input type="text" class="form-control" aria-describedby="cameraInfo" placeholder="CanonX20">
+      </div>
+      <div class="form-group cameraInputs" >
+        <label for="exampleInputEmail1">Postal Code</label>
+        <input type="text" class="form-control" aria-describedby="cameraInfo" placeholder="M3F2J5">
+      </div>
+      <div class="form-group cameraInputs" >
+        <label for="exampleInputEmail1">Direction</label>
+        <input type="text" class="form-control" aria-describedby="cameraInfo" placeholder="South">
+      </div>
+    <!--
+    <div class="form-check">
+      <div class="row">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Remember me</label>
+        <a href="{{ url_for('index') }}">Forgot My Password</a>
+        <a href="{{ url_for('index') }}">Forgot My Username</a>
+      </div>
+    </div>
+    -->
+    <div class="regbutton">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+<script type="text/javascript">
+  function writeUserData(uid,type,pc,dir){
+    firebase.database().ref('cameras/' + uid).set({
+      Type:type,
+      postalCode:pc,
+      Direction:dir
+      });
+    })
+</script>
+{% endblock %}

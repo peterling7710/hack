@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class ="reg center_div">
+  <h1> Login</h1>
+  <p> Please enter your Community ID.</p>
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Client ID</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eg.5EOh7jwCCPX5J5eWSe5AcFB3PDb2">
+      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+    <!--
+    <div class="form-check">
+      <div class="row">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Remember me</label>
+        <a href="{{ url_for('index') }}">Forgot My Password</a>
+        <a href="{{ url_for('index') }}">Forgot My Username</a>
+      </div>
+    </div>
+    -->
+    <div class="regbutton">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+{% endblock %}
